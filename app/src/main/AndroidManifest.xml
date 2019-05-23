@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".homework1.view.MVPActivity">
+
+        </activity>
+        <activity android:name=".homework1.view.MoxyMVPActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
