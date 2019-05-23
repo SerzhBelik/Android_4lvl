@@ -1,4 +1,4 @@
-package com.example.belikov.android_4lvl.homework1;
+package com.example.belikov.android_4lvl.homework1.view;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
