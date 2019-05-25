@@ -10,15 +10,18 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".homework1.view.MVPActivity" />
-        <activity android:name=".homework1.view.MoxyMVPActivity"></activity>
-        <activity android:name=".homework2.AsyncActivity">
+        <activity android:name=".homework1.view.MoxyMVPActivity" />
+        <activity android:name=".homework2.AsyncActivity"></activity>
+        <activity android:name=".homework2.ObserverActivity">
 
         </activity>
-        <activity android:name=".homework2.ObserverActivity"><intent-filter>
-            <action android:name="android.intent.action.MAIN" />
+        <activity android:name=".homework2.RxActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter></activity>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
