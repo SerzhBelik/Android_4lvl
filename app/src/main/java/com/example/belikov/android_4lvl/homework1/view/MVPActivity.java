@@ -9,7 +9,6 @@ import android.widget.TextView;
 
 import com.example.belikov.android_4lvl.R;
 import com.example.belikov.android_4lvl.homework1.presenter.MainPresenter;
-import com.example.belikov.android_4lvl.homework1.view.MainView;
 
 public class MVPActivity extends AppCompatActivity implements MainView {
     private TextView textView;

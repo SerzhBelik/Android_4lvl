@@ -4,7 +4,6 @@ import com.arellomobile.mvp.InjectViewState;
 import com.arellomobile.mvp.MvpPresenter;
 import com.example.belikov.android_4lvl.homework1.model.Model;
 
-import com.example.belikov.android_4lvl.homework1.view.MoxyMVPActivity;
 import com.example.belikov.android_4lvl.homework1.view.MoxyView;
 
 @InjectViewState
