@@ -1,9 +1,7 @@
 package com.example.belikov.android_4lvl.homework2;
 
 import android.util.Log;
-
 import java.util.concurrent.TimeUnit;
-
 import io.reactivex.Observable;
 import io.reactivex.ObservableEmitter;
 import io.reactivex.ObservableOnSubscribe;
@@ -27,6 +25,7 @@ public class MailPresenter {
                         emitter.onNext(mail);
                     }
 
+                    emitter.onComplete();
 
                 } catch (InterruptedException e) {
                     Log.d(TAG, "getMail: not disposed");
