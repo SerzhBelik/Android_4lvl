@@ -9,7 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MVPActivity">
+        <activity android:name=".homework1.view.MVPActivity" />
+        <activity android:name=".homework1.view.MoxyMVPActivity" />
+        <activity android:name=".homework2.AsyncActivity"></activity>
+        <activity android:name=".homework2.ObserverActivity">
+
+        </activity>
+        <activity android:name=".homework2.RxActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
