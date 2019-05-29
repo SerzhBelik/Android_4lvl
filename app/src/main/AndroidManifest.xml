@@ -11,11 +11,12 @@
         android:theme="@style/AppTheme">
         <activity android:name=".homework1.view.MVPActivity" />
         <activity android:name=".homework1.view.MoxyMVPActivity" />
-        <activity android:name=".homework2.AsyncActivity"></activity>
-        <activity android:name=".homework2.ObserverActivity">
+        <activity android:name=".homework2.AsyncActivity" />
+        <activity android:name=".homework2.ObserverActivity"></activity>
+        <activity android:name=".homework2.RxActivity">
 
         </activity>
-        <activity android:name=".homework2.RxActivity">
+        <activity android:name=".homework3.ButterKnifeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

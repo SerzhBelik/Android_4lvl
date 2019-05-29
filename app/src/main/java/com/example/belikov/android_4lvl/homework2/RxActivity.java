@@ -7,6 +7,7 @@ import android.view.View;
 
 import com.example.belikov.android_4lvl.R;
 
+import butterknife.ButterKnife;
 import io.reactivex.Observable;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;
@@ -25,6 +26,7 @@ public class RxActivity extends AppCompatActivity {
         setContentView(R.layout.activity_rx);
         mailPresenter = new MailPresenter();
         observable = mailPresenter.getMail();
+
     }
 
     public void subscribe(View view) {
