@@ -5,6 +5,9 @@ import java.util.concurrent.TimeUnit;
 import io.reactivex.Observable;
 import io.reactivex.ObservableEmitter;
 import io.reactivex.ObservableOnSubscribe;
+import io.reactivex.Scheduler;
+import io.reactivex.Single;
+import io.reactivex.SingleOnSubscribe;
 import io.reactivex.schedulers.Schedulers;
 
 public class MailPresenter {
@@ -34,6 +37,16 @@ public class MailPresenter {
         }).subscribeOn(Schedulers.io());
 
         return observable;
+    }
+
+    public Single<String> getMailText(){
+
+    Single<String> single = Single.create((SingleOnSubscribe<String>) emiter ->{
+        String mailText = "Hello!";
+        Log.d(TAG, "getMailText: " + Thread.currentThread().getName() + ": " + mailText);
+        emiter.onSuccess(mailText);
+    }).subscribeOn(Schedulers.io());
+    return single;
     }
 
 }
