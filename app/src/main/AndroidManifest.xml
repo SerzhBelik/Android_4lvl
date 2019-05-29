@@ -9,7 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MVPActivity">
+        <activity android:name=".homework1.view.MVPActivity" />
+        <activity android:name=".homework1.view.MoxyMVPActivity" />
+        <activity android:name=".homework2.AsyncActivity" />
+        <activity android:name=".homework2.ObserverActivity" />
+        <activity android:name=".homework2.RxActivity"></activity>
+        <activity android:name=".homework3.ButterKnifeActivity">
+
+        </activity>
+        <activity android:name=".homework3.SingleActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
