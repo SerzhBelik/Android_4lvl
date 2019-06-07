@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".homework5.view.RoomActivity"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/button_add_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add User"/>
+    <Button
+        android:id="@+id/button_add_users"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Users"/>
+    <Button
+        android:id="@+id/button_delete_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delete User"/>
+    <Button
+        android:id="@+id/button_update_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Update User"/>
+
+    <TextView
+        android:id="@+id/room_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+</LinearLayout>
