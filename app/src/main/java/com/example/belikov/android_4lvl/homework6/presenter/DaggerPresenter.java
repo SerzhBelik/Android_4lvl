@@ -17,7 +17,6 @@ import javax.inject.Inject;
 public class DaggerPresenter extends MvpPresenter<NoDiView> {
 
     private static final String TAG = "DaggerPresenter";
-//    private DaggerPresenter presenter;
 
     @Inject
     GreenDagger green;
