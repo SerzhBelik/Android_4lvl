@@ -2,17 +2,32 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.belikov.android_4lvl">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
+        android:name=".homework6.app.App"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".homework1.view.MVPActivity">
+        <activity android:name=".homework1.view.MVPActivity" />
+        <activity android:name=".homework1.view.MoxyMVPActivity" />
+        <activity android:name=".homework2.AsyncActivity" />
+        <activity android:name=".homework2.ObserverActivity" />
+        <activity android:name=".homework2.RxActivity" />
+        <activity android:name=".homework3.ButterKnifeActivity" />
+        <activity android:name=".homework3.SingleActivity" />
+        <activity android:name=".homework4.view.GsonActivity" />
+        <activity android:name=".homework4.view.RetrofitActivity" />
+        <activity android:name=".homework5.view.RoomActivity" />
+        <activity android:name=".homework6.view.NoDiActivity"></activity>
+        <activity android:name=".homework6.view.DiActivity">
 
         </activity>
-        <activity android:name=".homework1.view.MoxyMVPActivity">
+        <activity android:name=".homework6.view.DaggerActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
