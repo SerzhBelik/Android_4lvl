@@ -12,4 +12,10 @@ public class White {
         Log.d(TAG, green.show());
         Log.d(TAG, "Green " + green);
     }
+
+    public White(Green green){
+        this.green = green;
+        Log.d(TAG, green.show());
+        Log.d(TAG, "Green " + green);
+    }
 }

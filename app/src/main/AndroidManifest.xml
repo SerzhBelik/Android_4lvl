@@ -24,13 +24,12 @@
         <activity android:name=".homework4.view.RetrofitActivity" />
         <activity android:name=".homework5.view.RoomActivity"></activity>
         <activity android:name=".homework6.view.NoDiActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
-        <activity android:name=".homework6.view.DiActivity"></activity>
+        <activity android:name=".homework6.view.DiActivity"><intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter></activity>
     </application>
 
 </manifest>

@@ -13,4 +13,10 @@ public class Red {
         Log.d(TAG, "Green " + green);
     }
 
+    public Red(Green green){
+        this.green = green;
+        Log.d(TAG, green.show());
+        Log.d(TAG, "Green " + green);
+    }
+
     }
