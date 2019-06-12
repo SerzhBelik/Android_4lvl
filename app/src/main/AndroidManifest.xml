@@ -21,13 +21,14 @@
         <activity android:name=".homework3.ButterKnifeActivity" />
         <activity android:name=".homework3.SingleActivity" />
         <activity android:name=".homework4.view.GsonActivity" />
-        <activity android:name=".homework4.view.RetrofitActivity" />
-        <activity android:name=".homework5.view.RoomActivity" />
-        <activity android:name=".homework6.view.NoDiActivity"></activity>
-        <activity android:name=".homework6.view.DiActivity">
+        <activity android:name=".homework4.view.RetrofitActivity">
 
         </activity>
-        <activity android:name=".homework6.view.DaggerActivity">
+        <activity android:name=".homework5.view.RoomActivity" />
+        <activity android:name=".homework6.view.NoDiActivity" />
+        <activity android:name=".homework6.view.DiActivity"></activity>
+        <activity android:name=".homework6.view.DaggerActivity"></activity>
+        <activity android:name=".homework7.mockito.view.RetrofitActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
