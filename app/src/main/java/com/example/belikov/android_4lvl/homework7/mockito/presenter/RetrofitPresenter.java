@@ -26,7 +26,10 @@ public class RetrofitPresenter extends MvpPresenter<RetrofitView> {
 
     }
 
-
+    @Override
+    protected void onFirstViewAttach() {
+        super.onFirstViewAttach();
+    }
 
     public void getData() {
 
@@ -34,7 +37,7 @@ public class RetrofitPresenter extends MvpPresenter<RetrofitView> {
             Log.d(TAG, "onNext: " + str);
             Gson gson = new GsonBuilder().create();
             User user = gson.fromJson(str, User.class);
-            getViewState().setImage(user.avatarUrl);
+//            getViewState().setImage(user.avatarUrl);
             getViewState().setText(user.login);
         }, throwable -> {
             Log.e(TAG, "onError " + throwable);

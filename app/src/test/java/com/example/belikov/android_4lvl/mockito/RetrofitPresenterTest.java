@@ -29,8 +29,6 @@ public class RetrofitPresenterTest {
 
     @Mock
     RetrofitView retrofitView;
-//    @Mock
-//    RetrofitData retrofitData;
 
     @BeforeClass
     public static void setupClass() {
@@ -54,7 +52,7 @@ public class RetrofitPresenterTest {
                         RetrofitData retrofitData = super.provideRetrofitData();
                         User user = new User();
                         user.login = "Jack";
-                        Mockito.when(retrofitData.requestServer()).thenReturn(Observable.just(user.login));
+                        Mockito.when(retrofitData.requestServer()).thenReturn(Observable.just("Jack"));
                         return retrofitData;
                     }
                 }).build();

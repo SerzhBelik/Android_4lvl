@@ -5,9 +5,9 @@ import com.arellomobile.mvp.viewstate.strategy.SkipStrategy;
 import com.arellomobile.mvp.viewstate.strategy.StateStrategyType;
 
 public interface RetrofitView extends MvpView {
-
-    @StateStrategyType(value = SkipStrategy.class)
-    void setImage(String avatarUrl);
+//
+//    @StateStrategyType(value = SkipStrategy.class)
+//    void setImage(String avatarUrl);
     @StateStrategyType(value = SkipStrategy.class)
     void setText(String text);
 

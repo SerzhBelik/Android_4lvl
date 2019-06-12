@@ -8,6 +8,7 @@ import com.arellomobile.mvp.presenter.InjectPresenter;
 import com.arellomobile.mvp.presenter.ProvidePresenter;
 import com.bumptech.glide.Glide;
 import com.example.belikov.android_4lvl.R;
+import com.example.belikov.android_4lvl.homework7.mockito.app.App;
 import com.example.belikov.android_4lvl.homework7.mockito.presenter.RetrofitPresenter;
 
 import butterknife.BindView;
@@ -26,7 +27,9 @@ public class RetrofitActivity extends MvpAppCompatActivity implements RetrofitVi
 
     @ProvidePresenter
     public RetrofitPresenter providePresenter(){
-        return new RetrofitPresenter();
+        presenter = new RetrofitPresenter();
+        App.getAppComponent().inject(presenter);
+        return presenter;
     }
 
 
@@ -35,6 +38,8 @@ public class RetrofitActivity extends MvpAppCompatActivity implements RetrofitVi
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_retrofit);
         ButterKnife.bind(this);
+        App.getAppComponent().inject(this);
+
     }
 
     @OnClick(R.id.retrofit_button)
@@ -45,13 +50,13 @@ public class RetrofitActivity extends MvpAppCompatActivity implements RetrofitVi
 
 
 
-    @Override
-    public void setImage(String avatarUrl) {
-        Glide
-                .with(this)
-                .load(avatarUrl)
-                .into(imageView);
-    }
+//    @Override
+//    public void setImage(String avatarUrl) {
+//        Glide
+//                .with(this)
+//                .load(avatarUrl)
+//                .into(imageView);
+//    }
 
     @Override
     public void setText(String text) {
