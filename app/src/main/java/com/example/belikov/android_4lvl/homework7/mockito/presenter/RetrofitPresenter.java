@@ -43,7 +43,7 @@ public class RetrofitPresenter extends MvpPresenter<RetrofitView> {
     }
 
     private Observable<String> getUserObservable(){
-        App.getAppComponent().inject(this);
+//        App.getAppComponent().inject(this);
         return data.requestServer();
     }
 
