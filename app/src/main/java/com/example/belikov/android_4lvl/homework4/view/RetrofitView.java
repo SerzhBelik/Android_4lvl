@@ -8,6 +8,7 @@ public interface RetrofitView extends MvpView {
 
     @StateStrategyType(value = SkipStrategy.class)
     void setImage(String avatarUrl);
+    @StateStrategyType(value = SkipStrategy.class)
     void setText(String text);
 
 }

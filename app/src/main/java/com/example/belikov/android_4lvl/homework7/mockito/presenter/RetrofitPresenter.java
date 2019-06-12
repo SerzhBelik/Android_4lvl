@@ -1,16 +1,15 @@
 package com.example.belikov.android_4lvl.homework7.mockito.presenter;
 
 import android.util.Log;
-
 import com.arellomobile.mvp.InjectViewState;
 import com.arellomobile.mvp.MvpPresenter;
-
+import com.example.belikov.android_4lvl.homework7.mockito.app.App;
 import com.example.belikov.android_4lvl.homework7.mockito.model.RetrofitData;
 import com.example.belikov.android_4lvl.homework7.mockito.model.User;
 import com.example.belikov.android_4lvl.homework7.mockito.view.RetrofitView;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-
+import javax.inject.Inject;
 import io.reactivex.Observable;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;
@@ -20,16 +19,18 @@ public class RetrofitPresenter extends MvpPresenter<RetrofitView> {
 
     private static final String TAG = "RetrofitDifPresenter";
 
-    private RetrofitData data;
+    @Inject
+    RetrofitData data;
 
     public RetrofitPresenter() {
-        data = new RetrofitData();
+        App.getAppComponent().inject(this);
     }
 
-    public void getData() {
-        Observable<String> single = data.requestServer();
 
-        Disposable disposable = single.observeOn(AndroidSchedulers.mainThread()).subscribe(str -> {
+
+    public void getData() {
+
+        Disposable disposable = getUserObservable().observeOn(AndroidSchedulers.mainThread()).subscribe(str -> {
             Log.d(TAG, "onNext: " + str);
             Gson gson = new GsonBuilder().create();
             User user = gson.fromJson(str, User.class);
@@ -38,6 +39,11 @@ public class RetrofitPresenter extends MvpPresenter<RetrofitView> {
         }, throwable -> {
             Log.e(TAG, "onError " + throwable);
         });
+
+    }
+
+    private Observable<String> getUserObservable(){
+        return data.requestServer();
     }
 
 
