@@ -52,6 +52,7 @@ public class RetrofitPresenterTest {
                         RetrofitData retrofitData = super.provideRetrofitData();
                         User user = new User();
                         user.login = "Jack";
+                        user.avatarUrl = "https://avatars0.githubusercontent.com/u/66577?v=4";
                         Mockito.when(retrofitData.requestServer()).thenReturn(Observable.just(user));
                         return retrofitData;
                     }
@@ -61,6 +62,7 @@ public class RetrofitPresenterTest {
         presenter.attachView(retrofitView);
         presenter.getData();
         Mockito.verify(retrofitView).setText("Jack");
+        Mockito.verify(retrofitView).setImage("https://avatars0.githubusercontent.com/u/66577?v=4");
     }
 
 

@@ -1,6 +1,7 @@
 package com.example.belikov.android_4lvl.homework7.mockito.view;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.ImageView;
 import android.widget.TextView;
 import com.arellomobile.mvp.MvpAppCompatActivity;
@@ -56,6 +57,7 @@ public class RetrofitActivity extends MvpAppCompatActivity implements RetrofitVi
                 .with(this)
                 .load(avatarUrl)
                 .into(imageView);
+        Log.d("Activity", avatarUrl);
     }
 
     @Override
