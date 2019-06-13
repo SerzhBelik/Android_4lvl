@@ -2,6 +2,7 @@ package com.example.belikov.android_4lvl.mockito;
 
 
 
+import com.example.belikov.android_4lvl.app.TestComponent;
 import com.example.belikov.android_4lvl.app.TestModule;
 import com.example.belikov.android_4lvl.app.DaggerTestComponent;
 import com.example.belikov.android_4lvl.homework7.mockito.model.RetrofitData;
@@ -44,7 +45,7 @@ public class RetrofitPresenterTest {
 
     @Test
     public void getData_isCorrect() {
-        com.example.belikov.android_4lvl.app.TestComponent component = DaggerTestComponent.builder()
+        TestComponent component = DaggerTestComponent.builder()
                 .testModule(new TestModule() {
 
                     @Override
