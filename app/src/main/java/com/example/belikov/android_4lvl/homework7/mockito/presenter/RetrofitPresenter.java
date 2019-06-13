@@ -33,11 +33,11 @@ public class RetrofitPresenter extends MvpPresenter<RetrofitView> {
 
     public void getData() {
 
-        Disposable disposable = getUserObservable().observeOn(AndroidSchedulers.mainThread()).subscribe(str -> {
-            Log.d(TAG, "onNext: " + str);
-            Gson gson = new GsonBuilder().create();
-            User user = gson.fromJson(str, User.class);
-//            getViewState().setImage(user.avatarUrl);
+        Disposable disposable = getUserObservable().observeOn(AndroidSchedulers.mainThread()).subscribe(user -> {
+            Log.d(TAG, "onNext: " + user);
+//            Gson gson = new GsonBuilder().create();
+//            User user = gson.fromJson(str, User.class);
+            getViewState().setImage(user.avatarUrl);
             getViewState().setText(user.login);
         }, throwable -> {
             Log.e(TAG, "onError " + throwable);
@@ -45,7 +45,7 @@ public class RetrofitPresenter extends MvpPresenter<RetrofitView> {
 
     }
 
-    private Observable<String> getUserObservable(){
+    private Observable<User> getUserObservable(){
 //        App.getAppComponent().inject(this);
         return data.requestServer();
     }

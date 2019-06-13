@@ -1,9 +1,9 @@
 package com.example.belikov.android_4lvl.mockito;
 
-import com.example.belikov.android_4lvl.app.DaggerTestComponent;
-import com.example.belikov.android_4lvl.app.TestComponent;
+
+
 import com.example.belikov.android_4lvl.app.TestModule;
-import com.example.belikov.android_4lvl.homework7.mockito.app.App;
+import com.example.belikov.android_4lvl.app.DaggerTestComponent;
 import com.example.belikov.android_4lvl.homework7.mockito.model.RetrofitData;
 import com.example.belikov.android_4lvl.homework7.mockito.model.User;
 import com.example.belikov.android_4lvl.homework7.mockito.presenter.RetrofitPresenter;
@@ -44,7 +44,7 @@ public class RetrofitPresenterTest {
 
     @Test
     public void getData_isCorrect() {
-        TestComponent component = DaggerTestComponent.builder()
+        com.example.belikov.android_4lvl.app.TestComponent component = DaggerTestComponent.builder()
                 .testModule(new TestModule() {
 
                     @Override
@@ -52,7 +52,7 @@ public class RetrofitPresenterTest {
                         RetrofitData retrofitData = super.provideRetrofitData();
                         User user = new User();
                         user.login = "Jack";
-                        Mockito.when(retrofitData.requestServer()).thenReturn(Observable.just("Jack"));
+                        Mockito.when(retrofitData.requestServer()).thenReturn(Observable.just(user));
                         return retrofitData;
                     }
                 }).build();

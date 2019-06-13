@@ -1,7 +1,7 @@
-package com.example.belikov.android_4lvl.homework7.mockito.app;
+package com.example.belikov.android_4lvl.homework7.mockito1.app;
 
-import com.example.belikov.android_4lvl.homework7.mockito.presenter.RetrofitPresenter;
-import com.example.belikov.android_4lvl.homework7.mockito.view.RetrofitActivity;
+import com.example.belikov.android_4lvl.homework7.mockito1.retrofit.presenter.RetrofitPresenter;
+import com.example.belikov.android_4lvl.homework7.mockito1.retrofit.view.RetrofitActivity;
 
 import javax.inject.Singleton;
 

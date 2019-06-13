@@ -50,13 +50,13 @@ public class RetrofitActivity extends MvpAppCompatActivity implements RetrofitVi
 
 
 
-//    @Override
-//    public void setImage(String avatarUrl) {
-//        Glide
-//                .with(this)
-//                .load(avatarUrl)
-//                .into(imageView);
-//    }
+    @Override
+    public void setImage(String avatarUrl) {
+        Glide
+                .with(this)
+                .load(avatarUrl)
+                .into(imageView);
+    }
 
     @Override
     public void setText(String text) {
