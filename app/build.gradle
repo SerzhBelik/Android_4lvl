@@ -12,8 +12,14 @@ android {
     }
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            multiDexEnabled false
+            shrinkResources false
         }
     }
     compileOptions {
@@ -63,5 +69,9 @@ dependencies {
     androidTestAnnotationProcessor 'com.google.dagger:dagger-compiler:2.18'
     testAnnotationProcessor 'com.google.dagger:dagger-compiler:2.18'
     testImplementation 'com.google.dagger:dagger-compiler:2.18'
+
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.6.2'
+    releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.6.2'
+    debugImplementation 'com.squareup.leakcanary:leakcanary-support-fragment:1.6.2'
 
 }
